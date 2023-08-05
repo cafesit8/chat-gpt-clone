@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function Form () {
   const [prompt, setPrompt] = useState('')
-  const { getPromp, getResponse } = globalStore()
+  const { getPromp, getResponse, changeLoading } = globalStore()
 
   function handleSubmit (e: FormEvent<HTMLElement>) {
     e.preventDefault()
@@ -17,6 +17,7 @@ export default function Form () {
     const req = await axios.post('/api/hello', JSON.stringify({ prompt }))
     const res = await req.data
     getResponse(res)
+    changeLoading(false)
   }
 
   return (
