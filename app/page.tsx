@@ -19,10 +19,6 @@ export default function Home () {
       {!text && <Title />}
       {text && <Content />}
       <Form />
-      {/* <form onSubmit={handleSubmit} action="">
-        <input onChange={(e) => setPrompt(e.target.value)} className="text-black" type="text" name="" id="" />
-        <button>Enviar</button>
-      </form> */}
     </main>
   )
 }
