@@ -5,8 +5,6 @@ const configuration = new Configuration({
   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY
 })
 
-if (!configuration.apiKey) throw new Error('OPENAI_API_KEY is not set')
-
 const openai = new OpenAIApi(configuration)
 
 export async function POST (req: Request) {
