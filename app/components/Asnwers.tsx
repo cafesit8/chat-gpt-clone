@@ -24,8 +24,8 @@ export default function Asnwers () {
         ? <div className='w-full h-full flex justify-center items-center'>
           <span className="loader"></span>
         </div>
-        : response.map(text => (
-          <article key={text.prompt} className='flex flex-col gap-1'>
+        : response.map((text, i) => (
+          <article key={i} className='flex flex-col gap-1'>
             <div className='bg-[#545468] flex items-center p-3'>
               <Image priority src={user} alt='gpt' width={20} height={20} className='mr-2 self-baseline bg-white' />
               <h3>{prompt || text.prompt}</h3>

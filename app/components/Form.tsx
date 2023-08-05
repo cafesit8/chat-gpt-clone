@@ -14,7 +14,7 @@ export default function Form () {
   }
 
   async function getAnswer () {
-    const req = await axios.post('/api/hello', JSON.stringify({ prompt }))
+    const req = await axios.post('/api/chat', JSON.stringify({ prompt }))
     const res = await req.data
     getResponse(res)
     changeLoading(false)
