@@ -17,7 +17,6 @@ export default function Form () {
     const req = await axios.post('/api/hello', JSON.stringify({ prompt }))
     const res = await req.data
     getResponse(res)
-    console.log(res)
   }
 
   return (
