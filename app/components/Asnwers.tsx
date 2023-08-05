@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function Asnwers () {
   const { response, loading, text: prompt } = globalStore()
-  const contentRef = useRef(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (contentRef.current) {
       const { scrollHeight, clientHeight } = contentRef.current
